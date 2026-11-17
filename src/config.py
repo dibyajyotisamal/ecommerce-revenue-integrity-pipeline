@@ -1,7 +1,10 @@
 from datetime import datetime
 
-RAW_DATA_PATH = 'data/raw/ecommerce_orders_raw.csv'
-CLEAN_DATA_PATH = "data/processed/ecommerce_orders/clean.csv"
+#Define the import and export file paths
+import pathlib
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parents[1]
+RAW_DATA_PATH = PROJECT_ROOT / 'data' /'raw' / 'ecommerce_orders_data.csv'
+PROCESSED_DATA_PATH = PROJECT_ROOT / 'data' / 'processed' / 'ecommerce_orders_clean.csv'
 
 #Data Extraction Cutoff (for future-date validation)
 EXTRACTION_CUTOFF = datetime(2026,11,1)
